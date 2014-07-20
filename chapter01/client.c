@@ -114,6 +114,7 @@ send_recv_loop(int soc)
                 if (len == 0) {
                     /* EOF */
                     (void) fprintf(stderr, "recv:EOF\n");
+                    end = 1;
                     break;
                 }
                 /* 文字列化・表示 */
