@@ -56,7 +56,7 @@ client_socket(const char *hostnm, const char *portnm)
     }
     /* コネクト */
     if (connect(soc, res0->ai_addr, res0->ai_addrlen) == -1) {
-        perror("socket");
+        perror("connect");
         (void) close(soc);
         freeaddrinfo(res0);
         return (-1);
